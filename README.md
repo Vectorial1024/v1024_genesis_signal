@@ -14,6 +14,10 @@ Mods that listen to game start events may be triggered when e.g. visiting the St
 
 Alternate universes that may also be considered "canon" (e.g. the Star Wars overhaul universe) should patch their universe information into this mod to unify the start up sequence.
 
+## How to listen to the proper "universe started" events?
+
+(WIP)
+
 ## How to patch my alternative universe in?
 
 (WIP)
