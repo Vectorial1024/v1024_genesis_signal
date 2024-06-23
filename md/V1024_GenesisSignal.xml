@@ -24,8 +24,7 @@
             <actions>
                 <!-- no actions -->
                 <!-- at most we have a debug print -->
-                <show_help position="1" duration="6s" custom="'GenesisSignal.Start'" />
-                <show_help position="1" duration="6s" custom="'player.module ' + player.module" />
+                <show_help position="1" duration="6s" custom="'GenesisSignal.Start; player.module ' + player.module" />
             </actions>
         </cue>
     </cues>
