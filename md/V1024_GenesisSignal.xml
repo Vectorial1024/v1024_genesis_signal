@@ -16,8 +16,8 @@
                     <!-- Not Station Designer Simulation -->
                     <check_value value="player.module != 'x4ep1_gamestart_workshop'" />
                     <!-- Not Timelines DLC Facility -->
-                    <check_value value="player.module != 'x4ep1_hub_workshop'" />
-                    <!-- Not Timelines DLC mission -->
+                    <check_value value="player.module != 'x4ep1_gamestart_hub'" />
+                    <!-- Not Timelines DLC mission ("nodus") -->
                     <check_value value="player.allmodules.{player.module}.exists and not player.allmodules.{player.module}.isscenario" />
                 </check_all>
             </conditions>
@@ -25,6 +25,7 @@
                 <!-- no actions -->
                 <!-- at most we have a debug print -->
                 <show_help position="1" duration="6s" custom="'GenesisSignal.Start'" />
+                <show_help position="1" duration="6s" custom="'player.module ' + player.module" />
             </actions>
         </cue>
     </cues>
