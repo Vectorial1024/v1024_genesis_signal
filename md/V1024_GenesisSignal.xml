@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mdscript name="GenesisSignal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+    <cues>
+        <cue name="Start" instantiate="true">
+            <!-- 
+                Triggered when one of the following happens:
+                - A new Open Universe game is started
+                - An Open Universe game is loaded
+                This does not fire when a "sandboxed universe" is loaded, such as Station Designer, Timelines DLC, etc.
+            -->
+            <conditions>
+                <event_cue_signalled cue="md.Setup.Start" />
+                <check_all>
+                    <!-- Not Station Designer Simulation -->
+                    <check_value exact="player.module != 'x4ep1_gamestart_workshop'" />
+                    <!-- Not Timelines DLC Facility -->
+                    <check_value exact="player.module != 'x4ep1_hub_workshop'" />
+                    <!-- Not Timelines DLC mission -->
+                    <check_value exact="player.allmodules.{player.module}.exists and not player.allmodules.{player.module}.isscenario" />
+                </check_all>
+            </conditions>
+            <actions>
+                <!-- no actions -->
+                <!-- at most we have a debug print -->
+                <show_help position="1" duration="6s" custom="'GenesisSignal.Start'" />
+            </actions>
+        </cue>
+    </cues>
+</mdscript>
