@@ -11,12 +11,14 @@
             <conditions>
                 <event_cue_signalled cue="md.Setup.Start" />
                 <check_all>
+                    <!-- Not (unknown map editor) -->
+                    <check_value value="player.module != 'x4ep1_gamestart_mapeditor'" />
                     <!-- Not Station Designer Simulation -->
-                    <check_value exact="player.module != 'x4ep1_gamestart_workshop'" />
+                    <check_value value="player.module != 'x4ep1_gamestart_workshop'" />
                     <!-- Not Timelines DLC Facility -->
-                    <check_value exact="player.module != 'x4ep1_hub_workshop'" />
+                    <check_value value="player.module != 'x4ep1_hub_workshop'" />
                     <!-- Not Timelines DLC mission -->
-                    <check_value exact="player.allmodules.{player.module}.exists and not player.allmodules.{player.module}.isscenario" />
+                    <check_value value="player.allmodules.{player.module}.exists and not player.allmodules.{player.module}.isscenario" />
                 </check_all>
             </conditions>
             <actions>
