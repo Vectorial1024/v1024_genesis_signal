@@ -1,5 +1,5 @@
 # Genesis Signal
-Unified Mission Director cues for detecting X4 Foundations game start events.
+Unified Mission Director cues for correctly detecting X4 Foundations game start events.
 
 (links etc)
 
@@ -18,6 +18,24 @@ Alternate universes that may also be considered "canon" (e.g. the Star Wars over
 
 (WIP)
 
-## How to patch my alternative universe in?
+## How to patch my alternative universe into Genesis Signal?
 
-(WIP)
+Your mod structure:
+
+```
+/content.xml
+/libraries/[...]
+/extensions/v1024_genesis_signal/md/v1024_genesissignal.md
+```
+
+Inside `/extensions/v1024_genesis_signal/md/genesissignal.md`:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+    <add sel="/mdscript/cues/cue[@name='Start']/conditions/check_any">
+        <!-- Your open universe here -->
+        <check_value value="player.galaxy.macro == macro.your_open_universe_here" />
+    </add>
+</diff>
+```
