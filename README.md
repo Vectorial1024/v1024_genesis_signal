@@ -5,7 +5,7 @@ Unified Mission Director cues for correctly detecting X4 Foundations game start 
 
 ---
 
-For a long time in the modern X-game engine (X: Rebirth, and X4: Foundations), it has always been possible to start the game in so-called "alternate universes". This feature is later prominently used in X4 Foundations:
+For a long time in the modern X-game engine (X: Rebirth, and X4: Foundations), it has always been possible to start the game in so-called "alternate universes". This feature is later extensively used in X4 Foundations:
 - Tutorial levels
 - Station Design Simulator
 - 7.0 Timelines DLC
