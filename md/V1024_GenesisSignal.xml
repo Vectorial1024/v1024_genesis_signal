@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <mdscript name="GenesisSignal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
     <cues>
-        <cue name="Start" instantiate="true">
+        <cue name="Prepare" instantiate="true">
             <!-- 
                 Triggered when one of the following happens:
                 - A new Open Universe game is started
@@ -10,6 +10,17 @@
             -->
             <conditions>
                 <event_cue_signalled cue="md.Setup.Start" />
+            </conditions>
+            <actions>
+                <!-- Reset the signal flag to prepare the test... -->
+                <set_value name="global.$isOpenUniverse" exact="false" />
+                <!-- To test if we are in an open universe... -->
+                <signal_cue_instantly cue="Start"/>
+            </actions>
+        </cue>
+        <cue name="Start" instantiate="true">
+            <conditions>
+                <event_cue_signalled />
                 <check_any>
                     <!-- Is the main universe -->
                     <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" />
@@ -17,8 +28,8 @@
                 </check_any>
             </conditions>
             <actions>
-                <!-- no actions -->
-                <!-- at most we have a debug print -->
+                <!-- We are indeed inside the open universe. -->
+                <set_value name="global.$isOpenUniverse" exact="true" />
                 <show_help position="1" duration="6s" custom="'GenesisSignal.Start; player.module ' + player.module" />
             </actions>
         </cue>
