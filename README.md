@@ -16,9 +16,32 @@ Alternate universes that may also be considered "canon" (e.g. the Star Wars over
 
 ## How to listen to the proper "universe started" events?
 
-(WIP)
+Perhaps you are trying to initialize something when the universe starts.
 
-## How to patch my alternative universe into Genesis Signal?
+If you would normally be listening for `<event_cue_signalled cue="md.Setup.Start" />`, then it is simple:
+
+```xml
+<conditions>
+    <!-- This is triggered only when the universe is a known Open Universe -->
+    <event_cue_signalled cue="md.GenesisSignal.Start" />
+</conditions>
+```
+
+It is probably rarer to need to listen for `<event_cue_complete cue="md.Setup.Start" />`, but it is still doable:
+
+```xml
+<conditions>
+    <event_cue_complete cue="md.Setup.Start" />
+    <!-- if true, then it is an Open Universe game -->
+    <check_value value="@global.$isOpenUniverse" />
+</conditions>
+```
+
+This showcases the global variable for Open Universe checking, which may be used in regular MD scripts and AI scripts.
+
+## How to patch my alternate universe into Genesis Signal?
+
+Example of alternate universe from the community: Star Wars Interworlds.
 
 Your mod structure:
 
