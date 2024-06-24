@@ -10,16 +10,11 @@
             -->
             <conditions>
                 <event_cue_signalled cue="md.Setup.Start" />
-                <check_all>
-                    <!-- Not (unknown map editor) -->
-                    <check_value value="player.module != 'x4ep1_gamestart_mapeditor'" />
-                    <!-- Not Station Designer Simulation -->
-                    <check_value value="player.module != 'x4ep1_gamestart_workshop'" />
-                    <!-- Not Timelines DLC Facility -->
-                    <check_value value="player.module != 'x4ep1_gamestart_hub'" />
-                    <!-- Not Timelines DLC mission ("nodus") -->
-                    <check_value value="player.allmodules.{player.module}.exists and not player.allmodules.{player.module}.isscenario" />
-                </check_all>
+                <check_any>
+                    <!-- Is the main universe -->
+                    <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" />
+                    <!-- Other Open Universes / Overhaul Universes should add their patch here. -->
+                </check_any>
             </conditions>
             <actions>
                 <!-- no actions -->
