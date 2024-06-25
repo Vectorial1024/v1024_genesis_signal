@@ -1,7 +1,10 @@
 # Genesis Signal
 Unified Mission Director cues for correctly detecting X4 Foundations game start events.
 
-(links etc)
+- Our GitHub repository: https://github.com/Vectorial1024/v1024_genesis_signal
+- Our EgoSoft Forums page: (WIP)
+- Our Steam Workshop page: (WIP)
+- Our Nexus page: (WIP)
 
 ---
 
