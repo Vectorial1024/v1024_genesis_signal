@@ -3,7 +3,7 @@ Unified Mission Director cues for correctly detecting X4 Foundations game start 
 
 - Our GitHub repository: https://github.com/Vectorial1024/v1024_genesis_signal
 - Our EgoSoft Forums page: (WIP)
-- Our Steam Workshop page: (WIP)
+- Our Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=3275272450
 - Our Nexus page: (WIP)
 
 ---
@@ -64,4 +64,12 @@ Inside `/extensions/v1024_genesis_signal/md/genesissignal.md`:
         <check_value value="player.galaxy.macro == macro.your_open_universe_here" />
     </add>
 </diff>
+```
+
+Optionally, declare dependency on Genesis Signal by editing your `content.xml`:
+
+```xml
+<content>
+    <dependency id="ws_3275272450" name="Genesis Signal"/>
+</content>
 ```
