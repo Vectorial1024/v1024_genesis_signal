@@ -2,7 +2,7 @@
 Unified Mission Director cues for correctly detecting X4 Foundations game start events.
 
 - Our GitHub repository: https://github.com/Vectorial1024/v1024_genesis_signal
-- Our EgoSoft Forums page: (WIP)
+- Our EgoSoft Forums page: https://forum.egosoft.com/viewtopic.php?t=463558
 - Our Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=3275279686
 - Our Nexus page: (WIP)
 
