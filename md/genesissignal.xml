@@ -30,7 +30,7 @@
             <actions>
                 <!-- We are indeed inside the open universe. -->
                 <set_value name="global.$isOpenUniverse" exact="true" />
-                <show_help position="1" duration="6s" custom="'GenesisSignal.Start; player.module ' + player.module" />
+                <show_help position="1" duration="6s" custom="'GenesisSignal.Start; player.module ' + player.module" chance="0" />
             </actions>
         </cue>
     </cues>
