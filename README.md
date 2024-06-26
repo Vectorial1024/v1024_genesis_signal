@@ -61,7 +61,7 @@ Inside `/extensions/v1024_genesis_signal/md/genesissignal.md`:
 <diff>
     <add sel="/mdscript/cues/cue[@name='Start']/conditions/check_any">
         <!-- Your open universe here -->
-        <check_value value="player.galaxy.macro == macro.your_open_universe_here" />
+        <check_value value="player.galaxy.macro.ismacro.{macro.your_open_universe_here}" />
     </add>
 </diff>
 ```

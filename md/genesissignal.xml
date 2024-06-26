@@ -23,7 +23,7 @@
                 <event_cue_signalled />
                 <check_any>
                     <!-- Is the main universe -->
-                    <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" />
+                    <check_value value="player.galaxy.macro.ismacro.{macro.xu_ep2_universe_macro}" />
                     <!-- Other Open Universes / Overhaul Universes should add their patch here. -->
                 </check_any>
             </conditions>
