@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+    <!-- Tradestation drain script -->
+    <replace sel="/mdscript/cues/cue[@name='Start']/conditions/check_value[@value='player.galaxy.macro.ismacro.{macro.xu_ep2_universe_macro}']/@value">global.$isOpenUniverse</replace>
+</diff>

@@ -6,6 +6,10 @@ Unified Mission Director cues for correctly detecting X4 Foundations game start 
 - Our Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=3275279686
 - Our Nexus page: (WIP)
 
+Where reasonable, some vanilla script triggers are also changed to use Genesis Signal:
+- `md/drain_stations.xml`: A script that regularly drains NPC trade stations
+- `md/finalizestations.xml`: A script that helps design stations for spawning/building
+
 ---
 
 For a long time in the modern X-game engine (X: Rebirth, and X4: Foundations), it has always been possible to start the game in so-called "alternate universes". This feature is later extensively used in X4 Foundations:

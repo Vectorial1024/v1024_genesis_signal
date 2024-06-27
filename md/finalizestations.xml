@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+    <!-- Station loadout script -->
+    <replace sel="/mdscript/cues/cue[@name='Update_Neighbor_Defense_Station_Loadout']/conditions/check_all/check_value[@value='player.galaxy.macro.ismacro.{macro.xu_ep2_universe_macro}']/@value">global.$isOpenUniverse</replace>
+</diff>
